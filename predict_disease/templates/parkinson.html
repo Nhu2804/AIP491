@@ -392,6 +392,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        input.addEventListener("paste", function(e) {
+            e.preventDefault();
+            let paste = (e.clipboardData || window.clipboardData).getData("text");
+            if (!paste) return;
+            let parts = paste.split(/[, ]+/);
+            parts.forEach(code => {
+                code = code.trim();
+                const item = diagList.find(d => d.code === code);
+                if (item) addDiagnosis(item);
+            });
+            input.value = '';
+        });
+
         // 2. Gõ phím tìm kiếm (Autocomplete)
         input.addEventListener('input', function () {
             const text = this.value.toLowerCase().trim();
