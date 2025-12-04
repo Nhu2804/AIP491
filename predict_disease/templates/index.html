@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}MEDIPREDICT - Chọn Tác Vụ Dự Đoán{% endblock %}
+{% block title %}MEDIPREDICT - Choose Prediction Task{% endblock %}
 
 {% block content %}
 <!-- Link file CSS riêng cho trang này -->
@@ -9,14 +9,14 @@
 
 <!-- PHẦN 1: HERO HEADER -->
 <section class="prediction-hero">
-    <div class="hero-bg-pattern"></div> <!-- Lớp nền trang trí -->
+    <div class="hero-bg-pattern"></div> <!-- Decorative background layer -->
     <div class="container">
         <div class="hero-content">
             <span class="tagline"><i class="fas fa-microscope"></i> MEDIPREDICT AI</span>
-            <h1>Chọn tác vụ phân tích sức khỏe</h1>
+            <h1>Choose a health analysis task</h1>
             <p>
-                Dựa trên lịch sử chẩn đoán qua nhiều lần khám, hệ thống sử dụng mô hình học sâu 
-                để phân tích xu hướng bệnh lý và ước tính nguy cơ sức khỏe.
+                Based on diagnostic history across multiple visits, the system uses deep learning models
+                to analyze disease trends and estimate health risks.
             </p>
         </div>
     </div>
@@ -33,14 +33,14 @@
                     <div class="icon-wrapper icon-heart">
                         <i class="fas fa-heartbeat"></i>
                     </div>
-                    <h3>Nguy cơ Bệnh Tim</h3>
+                    <h3>Heart Disease Risk</h3>
                     <p>
-                        Mô hình đánh giá nguy cơ sẽ xuất hiện bệnh tim trong lần khám kế tiếp,
-                        dựa trên chuỗi chẩn đoán trong quá khứ của bệnh nhân.
+                        The model assesses the risk of heart disease appearing at the next visit,
+                        based on the patient's past sequence of diagnoses.
                     </p>
                 </div>
                 <div class="card-footer-custom">
-                    <span class="btn-task">Bắt đầu ngay <i class="fas fa-arrow-right"></i></span>
+                    <span class="btn-task">Start Now <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -50,28 +50,14 @@
                     <div class="icon-wrapper icon-brain">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Nguy cơ Parkinson</h3>
+                    <h3>Parkinson's Risk</h3>
                     <p>
-                        Hệ thống phân tích nguy cơ tiến triển Parkinson, 
-                        đặc biệt hướng tới việc phát hiện sớm các bệnh hiếm.
+                        The system analyzes the risk of Parkinson's progression,
+                        particularly aimed at early detection of rare diseases.
                     </p>
                 </div>
                 <div class="card-footer-custom">
-                    <span class="btn-task">Bắt đầu ngay <i class="fas fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- TASK 3: LẦN KHÁM KẾ -->
-            <a href="{% url 'predict_disease:predict_next_visit' %}" class="task-card card-notes">
-                <div class="card-body">
-                    <div class="icon-wrapper icon-notes">
-                        <i class="fas fa-notes-medical"></i>
-                    </div>
-                    <h3>Diễn tiến lần khám tới</h3>
-                    <p>Dự đoán các mã bệnh ICD có thể xuất hiện trong lần khám kế tiếp dựa trên trình tự bệnh án trước đó.</p>
-                </div>
-                <div class="card-footer-custom">
-                    <span class="btn-task">Bắt đầu ngay <i class="fas fa-arrow-right"></i></span>
+                    <span class="btn-task">Start Now <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 

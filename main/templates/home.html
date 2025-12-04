@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}MEDIPREDICT - Trang chủ{% endblock %}
+{% block title %}Homepage{% endblock %}
 
 {% block content %}
 
@@ -9,38 +9,38 @@
 <section class="hero-section">
     <img src="{% static 'images/medical.jpg' %}" alt="Medical Background" class="bg-image">
     <div class="container">
-        <h1>Hệ thống dự đoán y tế</h1>
-        <p>Ứng dụng AI để phân tích dữ liệu y khoa và dự đoán các diễn biến sức khỏe có thể xảy ra, cung cấp kết quả tham khảo cho mục đích phân tích và nghiên cứu.</p>
+        <h1>Medical Prediction System</h1>
+        <p>Using AI to analyze medical data and predict potential health developments, providing reference results for analysis and research purposes.</p>
         <div class="hero-actions">
-            <a href="#disease-prediction-section" class="btn btn-primary">Khám phá ngay <i class="fas fa-chevron-down"></i></a>
+            <a href="#disease-prediction-section" class="btn btn-primary">Explore Now <i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
 </section>
 
 <!-- ============================= -->
-<!-- 1) DOWNSTREAM – DỰ ĐOÁN BỆNH -->
+<!-- 1) DOWNSTREAM – DISEASE PREDICTION -->
 <!-- ============================= -->
 <section id="disease-prediction-section" class="feature-showcase">
     <div class="container">
         <div class="showcase-grid">
             <div class="showcase-image">
                 <div class="image-wrapper">
-                    <img src="{% static 'images/predict-disease.jpg' %}" alt="Dự đoán bệnh">
+                    <img src="{% static 'images/predict-disease.jpg' %}" alt="Disease Prediction">
                 </div>
             </div>
             <div class="showcase-content">
-                <span class="tagline">DỰ ĐOÁN DIỄN TIẾN</span>
-                <h2>Dự đoán rủi ro bệnh trong lần khám tiếp theo</h2>
+                <span class="tagline">PROGRESSION PREDICTION</span>
+                <h2>Predicting disease risks at the next visit</h2>
                 <p>
-                    Hệ thống phân tích lịch sử bệnh án của bệnh nhân để dự đoán nguy cơ các bệnh có thể xuất hiện trong lần khám tiếp theo, bao gồm cả các bệnh phổ biến như bệnh tim và các bệnh ít gặp như Parkinson.
+                    The system analyzes the patient's medical history to predict the risk of diseases that may appear at the next visit, including common conditions like heart disease and rare diseases like Parkinson's.
                 </p>
                 <ul>
-                    <li><i class="fas fa-check-circle"></i> Dễ sử dụng — chỉ cần nhập các mã bệnh trước đó.</li>
-                    <li><i class="fas fa-check-circle"></i> Dự đoán khả năng xuất hiện các bệnh trong lần khám kế tiếp.</li>
-                    <li><i class="fas fa-check-circle"></i> Chỉ mang tính tham khảo, không phải chẩn đoán y tế chính thức.</li>
+                    <li><i class="fas fa-check-circle"></i> Easy to use — just enter previous disease codes.</li>
+                    <li><i class="fas fa-check-circle"></i> Predicts the likelihood of diseases appearing at the next visit.</li>
+                    <li><i class="fas fa-check-circle"></i> For reference only, not an official medical diagnosis.</li>
                 </ul>
                 <a href="{% url 'predict_disease:index' %}" class="btn btn-accent">
-                    Thử nghiệm dự đoán bệnh <i class="fas fa-arrow-right"></i>
+                    Try Disease Prediction <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -48,27 +48,27 @@
 </section>
 
 <!-- =============================================== -->
-<!-- 2) DUAL MTGAN – DỰ ĐOÁN THỦ THUẬT TỪ CHẨN ĐOÁN -->
+<!-- 2) DUAL MTGAN – PROCEDURE PREDICTION FROM DIAGNOSIS -->
 <!-- =============================================== -->
 <section id="procedure-prediction-section" class="feature-showcase bg-white">
     <div class="container">
         <div class="showcase-grid layout-reversed">
             <div class="showcase-image">
                 <div class="image-wrapper">
-                    <img src="{% static 'images/predict-procedure.jpg' %}" alt="Dự đoán thủ thuật">
+                    <img src="{% static 'images/predict-procedure.jpg' %}" alt="Procedure Prediction">
                 </div>
             </div>
             <div class="showcase-content">
-                <span class="tagline">HỖ TRỢ CAN THIỆP</span>
-                <h2>Dự đoán thủ thuật y khoa phù hợp</h2>
-                <p>Sử dụng mô hình AI để học mối quan hệ giữa chẩn đoán và thủ thuật trong dữ liệu EHR. Dựa trên chẩn đoán đầu vào, AI sẽ gợi ý những thủ thuật thường gặp và phù hợp nhất.</p>
+                <span class="tagline">INTERVENTION SUPPORT</span>
+                <h2>Predicting appropriate medical procedures</h2>
+                <p>Uses AI models to learn the relationship between diagnoses and procedures in EHR data. Based on input diagnoses, AI will suggest the most common and appropriate procedures.</p>
                 <ul>
-                    <li><i class="fas fa-check-circle"></i> Gợi ý thủ thuật phù hợp dựa trên chẩn đoán.</li>
-                    <li><i class="fas fa-check-circle"></i> Hiển thị kết quả dưới dạng tham khảo.</li>
-                    <li><i class="fas fa-check-circle"></i> Dùng cho mục đích học tập, phân tích và nghiên cứu.</li>
+                    <li><i class="fas fa-check-circle"></i> Suggests suitable procedures based on diagnosis.</li>
+                    <li><i class="fas fa-check-circle"></i> Displays results as reference.</li>
+                    <li><i class="fas fa-check-circle"></i> For learning, analysis, and research purposes.</li>
                 </ul>
                 <a href="{% url 'predictproc:procedure_page' %}" class="btn btn-accent">
-                    Thử nghiệm dự đoán thủ thuật <i class="fas fa-arrow-right"></i>
+                    Try Procedure Prediction <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -78,22 +78,22 @@
 <!-- WHY CHOOSE -->
 <section id="features" class="features-section">
     <div class="container">
-        <h2>Tại sao nên chọn MEDIPREDICT?</h2>
+        <h2>Why Choose MEDIPREDICT?</h2>
         <div class="features-grid">
             <div class="feature-item">
                 <i class="fas fa-lightbulb"></i>
-                <h3>Công cụ tham khảo</h3>
-                <p>Cung cấp các gợi ý y khoa dựa trên phân tích dữ liệu, giúp có thêm thông tin tham khảo để đánh giá và nghiên cứu.</p>
+                <h3>Reference Tool</h3>
+                <p>Provides medical suggestions based on data analysis, offering additional reference information for evaluation and research.</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-database"></i>
-                <h3>Dữ liệu an toàn</h3>
-                <p>Toàn bộ mô hình được huấn luyện trên dữ liệu EHR synthetic sinh bởi MTGAN – đảm bảo không chứa thông tin bệnh nhân thật.</p>
+                <h3>Safe Data</h3>
+                <p>All models are trained on synthetic EHR data generated by MTGAN – ensuring no real patient information is included.</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-chart-line"></i>
-                <h3>Tăng cường mô hình dự đoán</h3>
-                <p>Dữ liệu synthetic giúp cải thiện hiệu quả huấn luyện các mô hình downstream, đặc biệt trong các bệnh hiếm.</p>
+                <h3>Enhanced Prediction Models</h3>
+                <p>Synthetic data helps improve the training efficiency of downstream models, especially for rare diseases.</p>
             </div>
         </div>
     </div>
