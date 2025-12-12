@@ -16,12 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include 
+from django.http import JsonResponse   # 👈 THÊM
+
+def health(request):                  # 👈 THÊM
+    return JsonResponse({"status": "ok"})
+
 
 urlpatterns = [
+    path('health/', health),  
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    #path("cases/", include(("cases.urls", "cases"), namespace="cases")),
     path('predict_disease/', include('predict_disease.urls', namespace='predict_disease')),
-    # path('predict/', include('predict.urls', namespace='predict')),
     path('predictproc/', include('predictproc.urls', namespace='predictproc')),
 ]
