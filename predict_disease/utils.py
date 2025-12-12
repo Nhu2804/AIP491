@@ -13,7 +13,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 ARTIFACTS_DIR = os.path.join(settings.BASE_DIR, 'predict_disease/ml_artifacts')
 MODEL_HF_PATH = os.path.join(ARTIFACTS_DIR, 'model1_hf.pth')
-MODEL_PD_PATH = os.path.join(ARTIFACTS_DIR, 'model1_pd_6k.pth') 
+MODEL_PD_PATH = os.path.join(ARTIFACTS_DIR, 'model1_pd.pth') 
 MAP_PATH   = os.path.join(ARTIFACTS_DIR, 'code_map.pkl')
 MAX_LEN = 40
 
