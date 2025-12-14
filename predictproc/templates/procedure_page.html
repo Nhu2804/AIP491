@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const predictBtnSpinner = document.getElementById("predictBtnSpinner");
     const resultsContainer = document.getElementById("resultsContainer");
 
-    fetch("{% static 'data/diag_list_1200.json' %}")
+    fetch("{% static 'data/diag_list_1k2.json' %}")
         .then(response => response.json())
         .then(data => diagList = data)
         .catch(err => console.error("Error loading diag_list:", err));

@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let diagList = []; // Global variable containing disease list
 
     // 1. Load disease JSON data
-    fetch("{% static 'data/diag_list_1500.json' %}")
+    fetch("{% static 'data/diag_list_1k5.json' %}")
         .then(response => response.json())
         .then(data => {
             diagList = data;

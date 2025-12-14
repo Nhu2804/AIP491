@@ -218,7 +218,7 @@ def predict_procedure_from_diag(diag_codes_list):
         if should_take:
             if idx in ID2CODE_PROC:
                 p_code = ID2CODE_PROC[idx]
-                p_name = PROC_NAMES.get(p_code, f"Thủ thuật {p_code}")
+                p_name = PROC_NAMES.get(p_code, f"Procedure {p_code}")
                 
                 results.append({
                     "code": p_code,
